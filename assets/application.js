@@ -10953,7 +10953,7 @@ return jQuery;
   for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
     requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
     cancelAnimationFrame = cancelAnimationFrame ||
-      window[ vendors[lastTime] + "CancelAnimationFrame" ] || 
+      window[ vendors[lastTime] + "CancelAnimationFrame" ] ||
       window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
   }
 
@@ -10993,7 +10993,7 @@ return jQuery;
     window.cancelAnimationFrame = function(id) {
       clearTimeout(id);
     };
-      
+
   }
 
   }( jQuery ));
@@ -11175,7 +11175,7 @@ return jQuery;
         } else {
           var query = Foundation.media_queries[media];
           if(query !== undefined) {
-            Foundation.stylesheet.insertRule('@media ' + 
+            Foundation.stylesheet.insertRule('@media ' +
               Foundation.media_queries[media] + '{ ' + rule + ' }');
           }
         }
@@ -11588,8 +11588,8 @@ return jQuery;
 
             // if clearing is open and the current image is
             // clicked, go to the next image in sequence
-            if (target.hasClass('visible') && 
-              current[0] === target[0] && 
+            if (target.hasClass('visible') &&
+              current[0] === target[0] &&
               next.length > 0 && self.is_open(current)) {
               target = next;
               image = $('img', target);
@@ -12042,8 +12042,8 @@ return jQuery;
           if ($(e.target).data('dropdown') || $(e.target).parent().data('dropdown')) {
             return;
           }
-          if (!($(e.target).data('revealId')) && 
-            (parent.length > 0 && ($(e.target).is('[data-dropdown-content]') || 
+          if (!($(e.target).data('revealId')) &&
+            (parent.length > 0 && ($(e.target).is('[data-dropdown-content]') ||
               $.contains(parent.first()[0], e.target)))) {
             e.stopPropagation();
             return;
@@ -12185,11 +12185,11 @@ return jQuery;
         xxlarge: Foundation.media_queries.xxlarge,
         landscape : 'only screen and (orientation: landscape)',
         portrait : 'only screen and (orientation: portrait)',
-        retina : 'only screen and (-webkit-min-device-pixel-ratio: 2),' + 
-          'only screen and (min--moz-device-pixel-ratio: 2),' + 
-          'only screen and (-o-min-device-pixel-ratio: 2/1),' + 
-          'only screen and (min-device-pixel-ratio: 2),' + 
-          'only screen and (min-resolution: 192dpi),' + 
+        retina : 'only screen and (-webkit-min-device-pixel-ratio: 2),' +
+          'only screen and (min--moz-device-pixel-ratio: 2),' +
+          'only screen and (-o-min-device-pixel-ratio: 2/1),' +
+          'only screen and (min-device-pixel-ratio: 2),' +
+          'only screen and (min-resolution: 192dpi),' +
           'only screen and (min-resolution: 2dppx)'
       },
 
@@ -12266,9 +12266,9 @@ return jQuery;
           if (passed) {
             this.settings.directives[passed
               .scenario[1]](passed.el, passed.scenario[0], function () {
-                if (arguments[0] instanceof Array) { 
+                if (arguments[0] instanceof Array) {
                   var args = arguments[0];
-                } else { 
+                } else {
                   var args = Array.prototype.slice.call(arguments, 0);
                 }
 
@@ -13504,7 +13504,7 @@ return jQuery;
       slides_container.wrap('<div class="'+settings.container_class+'"></div>');
       container = slides_container.parent();
       slides_container.addClass(settings.slides_container_class);
-      
+
       if (settings.navigation_arrows) {
         container.append($('<a href="#"><span></span></a>').addClass(settings.prev_class));
         container.append($('<a href="#"><span></span></a>').addClass(settings.next_class));
@@ -13553,7 +13553,7 @@ return jQuery;
       if (next_idx < idx) {dir = 'prev';}
       if (next_idx >= slides.length) {next_idx = 0;}
       else if (next_idx < 0) {next_idx = slides.length - 1;}
-      
+
       var current = $(slides.get(idx));
       var next = $(slides.get(next_idx));
 
@@ -13564,7 +13564,7 @@ return jQuery;
       slides_container.trigger('before-slide-change.fndtn.orbit');
       settings.before_slide_change();
       self.update_active_link(next_idx);
-      
+
       var callback = function() {
         var unlock = function() {
           idx = next_idx;
@@ -13585,7 +13585,7 @@ return jQuery;
 
       var start_animation = function() {
         if (dir === 'next') {animate.next(current, next, callback);}
-        if (dir === 'prev') {animate.prev(current, next, callback);}        
+        if (dir === 'prev') {animate.prev(current, next, callback);}
       };
 
       if (next.height() > slides_container.height() && settings.variable_height) {
@@ -13594,13 +13594,13 @@ return jQuery;
         start_animation();
       }
     };
-    
+
     self.next = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
       self._goto(idx + 1);
     };
-    
+
     self.prev = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -13626,7 +13626,7 @@ return jQuery;
     self.timer_callback = function() {
       self._goto(idx + 1, true);
     }
-    
+
     self.compute_dimensions = function() {
       var current = $(slides_container.children().get(idx));
       var h = current.height();
@@ -13640,8 +13640,8 @@ return jQuery;
 
     self.create_timer = function() {
       var t = new Timer(
-        container.find('.'+settings.timer_container_class), 
-        settings, 
+        container.find('.'+settings.timer_container_class),
+        settings,
         self.timer_callback
       );
       return t;
@@ -13655,7 +13655,7 @@ return jQuery;
       var t = container.find('.'+settings.timer_container_class);
       if (t.hasClass(settings.timer_paused_class)) {
         if (typeof timer === 'undefined') {timer = self.create_timer();}
-        timer.start();     
+        timer.start();
       }
       else {
         if (typeof timer === 'object') {timer.stop();}
@@ -13666,8 +13666,8 @@ return jQuery;
       self.build_markup();
       if (settings.timer) {timer = self.create_timer(); timer.start();}
       animate = new FadeAnimation(settings, slides_container);
-      if (settings.animation === 'slide') 
-        animate = new SlideAnimation(settings, slides_container);        
+      if (settings.animation === 'slide')
+        animate = new SlideAnimation(settings, slides_container);
       container.on('click', '.'+settings.next_class, self.next);
       container.on('click', '.'+settings.prev_class, self.prev);
       container.on('click', '[data-orbit-slide]', self.link_bullet);
@@ -13721,7 +13721,7 @@ return jQuery;
           timer.start();
         }
       });
-      
+
       $(document).on('click', '[data-orbit-link]', self.link_custom);
       $(window).on('resize', self.compute_dimensions);
       $(window).on('load', self.compute_dimensions);
@@ -13738,7 +13738,7 @@ return jQuery;
     var self = this,
         duration = settings.timer_speed,
         progress = el.find('.'+settings.timer_progress_class),
-        start, 
+        start,
         timeout,
         left = -1;
 
@@ -13781,7 +13781,7 @@ return jQuery;
       el.trigger('timer-stopped.fndtn.orbit');
     };
   };
-  
+
   var SlideAnimation = function(settings, container) {
     var duration = settings.animation_speed;
     var is_rtl = ($('html[dir=rtl]').length === 1);
@@ -13890,7 +13890,7 @@ return jQuery;
     }
   };
 
-    
+
 }(jQuery, this, this.document));
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -14292,8 +14292,8 @@ return jQuery;
       touch_close_text: 'Tap To Close',
       disable_for_touch: false,
       tip_template : function (selector, content) {
-        return '<span data-selector="' + selector + '" class="' 
-          + Foundation.libs.tooltip.settings.tooltip_class.substring(1) 
+        return '<span data-selector="' + selector + '" class="'
+          + Foundation.libs.tooltip.settings.tooltip_class.substring(1)
           + '">' + content + '<span class="nub"></span></span>';
       }
     },
@@ -14310,7 +14310,7 @@ return jQuery;
       if (Modernizr.touch) {
         $(this.scope)
           .off('.tooltip')
-          .on('click.fndtn.tooltip touchstart.fndtn.tooltip touchend.fndtn.tooltip', 
+          .on('click.fndtn.tooltip touchstart.fndtn.tooltip touchend.fndtn.tooltip',
             '[data-tooltip]', function (e) {
             var settings = $.extend({}, self.settings, self.data_options($(this)));
             if (!settings.disable_for_touch) {
@@ -14319,7 +14319,7 @@ return jQuery;
               self.showOrCreateTip($(this));
             }
           })
-          .on('click.fndtn.tooltip touchstart.fndtn.tooltip touchend.fndtn.tooltip', 
+          .on('click.fndtn.tooltip touchstart.fndtn.tooltip touchend.fndtn.tooltip',
             this.settings.tooltip_class, function (e) {
             e.preventDefault();
             $(this).fadeOut(150);
@@ -14327,7 +14327,7 @@ return jQuery;
       } else {
         $(this.scope)
           .off('.tooltip')
-          .on('mouseenter.fndtn.tooltip mouseleave.fndtn.tooltip', 
+          .on('mouseenter.fndtn.tooltip mouseleave.fndtn.tooltip',
             '[data-tooltip]', function (e) {
             var $this = $(this);
 
@@ -14674,7 +14674,7 @@ return jQuery;
             topbar.css('height', $this.siblings('ul').outerHeight(true) + topbar.data('height'));
           }
         });
-      
+
       $(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
       }, 50)).trigger('resize');
@@ -15722,7 +15722,7 @@ return jQuery;
       e = ref[i];
       e = $(e);
       name = e.data('name');
-      results.push(e.html(name + "@everytimehq.com"));
+      results.push(e.html(name + "@broken-circle-productions.com"));
     }
     return results;
   });
