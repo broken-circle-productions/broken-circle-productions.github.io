@@ -5401,7 +5401,7 @@ body .main_section .side_section a {
 }
 /* line 34, /home/gui/work/web/broken-circle-production/app/assets/stylesheets/main.sass */
 body .main_section .side_section .description_container .description {
-  max-width: 260px;
+  max-width: 240px;
   display: inline-block;
   font-size: 12px;
   color: white;
