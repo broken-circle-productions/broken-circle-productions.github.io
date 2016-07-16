@@ -1,97 +1,45 @@
 <!DOCTYPE html>
-<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+<html lang='en'>
   <head>
-    <title>
-      Seeds - The Film
-    </title>
-    <meta content='Seeds - The Film' name='description'>
-    <meta content='Seeds' name='keywords'>
-    <meta content='Guillaume Fradin' name='author'>
-    <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="/assets/application.css" />
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  	<title>SEEDS Feature Film</title>
+  
+  	<link rel="stylesheet" media="screen" href="/assets/application.css" />
+  	<script src="/assets/application.js" data-turbolinks-track="true"></script>
+  	<meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="GqXIQxkEFHl6bHuW8+RUlV37+PH4xPi4K5SZY/xGv7FTZ4TWnJ6waEvWD1ECO+yvGdzERN7KiWYjLcZ5/3sJQw==" />
   </head>
   <body>
-    <div class='full-screen-background'>
-      <div class='vertical-centered-parent'>
-        <div class='vertical-centered'>
-          <div class='custom_carousel' data-index='0'>
-            <img class="carousel_image" src="/assets/concepts/shelter/shelter.large.b.01.jpg" alt="Shelter.large.b.01" />
-            <img class="carousel_image" src="/assets/concepts/shelter/shelter.large.b.02.jpg" alt="Shelter.large.b.02" />
-            <img class="carousel_image" src="/assets/concepts/shelter/shelter.large.b.03.jpg" alt="Shelter.large.b.03" />
-            <img class="carousel_image" src="/assets/concepts/shelter/shelter.large.b.04.jpg" alt="Shelter.large.b.04" />
-            <div class='actions-parent gradient text-right'>
-              <div class='main_title'>
-                <h1>SEEDS</h1>
-                <div class='logline'>
-                  <h5>
-                    A young and ambitious scientist has been selected to be isolated in a NASA shelter
-                    to test the equipment for sustaining life on Mars. But she will soon realise that the mission is much darker.
-                  </h5>
-                </div>
-              </div>
-              <div class='credentials'>
-                <h6>&bull; Bronze award in the science fiction category at the Beverly Hills Screenplay Competition</h6>
-                <h6>&bull; In the top 15% of the Academy Nicholl Fellowship Competition</h6>
-              </div>
-              <div class='actions'>
-                <a class='button tiny radius notice background-control prev'>
-                  <h4>
-                    <i class='fi-arrow-left'></i>
-                  </h4>
-                </a>
-                <a class='button tiny radius alert' id='video_opener'>
-                  <h4>
-                    <i class='fi-play-circle'></i>
-                    Watch Teaser
-                  </h4>
-                </a>
-                <a class='button tiny radius notice background-control next'>
-                  <h4>
-                    <i class='fi-arrow-right'></i>
-                  </h4>
-                </a>
+    <div class='row main'>
+      <div class='column medium-12 main'>
+        <div class='main_section'>
+          <img class="poster" src="/assets/seeds/poster/SEEDS.poster.jpg" alt="Seeds.poster" />
+          <div class='side_section'>
+            <a class="button alert" href="/seeds/short_film">short film</a>
+            <a class="button alert" href="/seeds/concept_arts">concept arts</a>
+            <div class='description_container'>
+              <div class='description'>
+                <p>
+                  <div class='section_title'>Synopsis:</div>
+                  A young astronaut trains for the first expedition to Mars.
+                </p>
+                <p>
+                  <div class='section_title'>Awards:</div>
+                  top 15% of the
+                  <strong>Academy Nicholl Fellowship Competition,</strong>
+                  Bronze award at the Beverly Hills Screenplay Competition
+                </p>
+                <p>
+                  <div class='section_title'>Contact:</div>
+                  <div class='email_widget' data-name='gui'></div>
+                </p>
               </div>
             </div>
-          </div>
-          <div class='footer'>
-            <span class='email' data-name='gui'></span>
-            |
-            written by
-            <a href="http://imdb.me/gui">Guillaume Fradin</a>,
-            concept arts by
-            <a href="http://www.imdb.com/name/nm1578088">Paul Chandler</a>
-            and
-            <a href="http://www.imdb.com/name/nm3988508">Julien Legay</a>
           </div>
         </div>
       </div>
     </div>
-    <div aria-hidden='true' aria-labelledby='modalTitle' class='reveal-modal full' data-reveal id='video_modal' role='dialog'>
-      <div class='text-right'>
-        <div class='modal_closer'>close</div>
-      </div>
-      <video controls="controls" preload="auto" width="1280" height="720" data-setup="" class="video-js vjs-default-skin" id="concept_video" src="/assets/concept2.mp4"></video>
-    </div>
-
-
-    <script type="text/javascript">
-    var _gauges = _gauges || [];
-    (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '55e1c965de2e262ca400f05a');
-    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
-    t.src = 'https://track.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-    })();
-    </script>
-    <script src="/assets/vendor/modernizr.js"></script>
-    <script src="/assets/application.js"></script>
-    <script src="//vjs.zencdn.net/4.12/video.js"></script>
   </body>
 </html>
