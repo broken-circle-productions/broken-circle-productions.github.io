@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-  	<meta charset="utf-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  	<title>SEEDS Feature Film</title>
-  
-  	<link rel="stylesheet" media="screen" href="/assets/application.css" />
-  	<script src="/assets/application.js" data-turbolinks-track="true"></script>
-  	<meta name="csrf-param" content="authenticity_token" />
-  <meta name="csrf-token" content="49amBvT9ouX2o3Odf9N7S7GOM+jEGqvOdPMflySJuRCGZerGiEjCUEwgt3iNG0EReuqqYOcgalxpnxN40aiGXA==" />
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>
+      Broken Circle
+    </title>
+    <meta content='Seeds - short film by Guillaume Fradin' property='og:title'>
+    <meta content='http://localhost:5000/assets/seeds/poster/SEEDS.poster.jpg' property='og:image'>
+    <link rel="stylesheet" media="screen" href="/assets/application.css" />
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Roboto:300" />
+    <script src="/assets/application.js" data-turbolinks-track="true"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="sMAAUhMUwjQ+8SZEUW/kvLVLDZegN8xBSnukc8oOzb2KuCvW0nmPTB3gTkFAVD8qXn3YQfpUznDO3/cx8u1EOQ==" />
   </head>
   <body>
-    <div class='row main'>
-      <div class='column medium-12 main'>
-        <div class='main_section'>
-          <img class="poster" src="/assets/seeds/poster/SEEDS.poster.jpg" alt="Seeds.poster" />
-          <div class='side_section'>
-            <a class='button' href='/seeds'>
-              <i class='fa fa-home'></i>
-            </a>
+    <div class='container'>
+      <nav>
+        <div class='nav-wrapper'>
+          <a href="/seeds">Seeds</a>
+          <a class='button-collapse' data-activates='mobile-demo' href='/'>
+            <i class='material-icons'>menu</i>
+          </a>
+          <ul class='right hide-on-med-and-down'>
+            <li>
+              <a href="/seeds/short_film">short film</a>
+            </li>
+            <li>
+              <a href="/seeds/teaser">teaser</a>
+            </li>
+            <li>
+              <a href="/seeds/concept_arts">concept arts</a>
+            </li>
+          </ul>
+          <ul class='side-nav' id='mobile-demo'>
+            <li>
+              <a href="/seeds/short_film">short film</a>
+            </li>
+            <li>
+              <a href="/seeds/teaser">teaser</a>
+            </li>
+            <li>
+              <a href="/seeds/concept_arts">concept arts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class='row main'>
+        
+        <div class='column medium-12 main'>
+          <div class='main_section'>
+            <img class="poster responsive-img" src="/assets/seeds/poster/SEEDS.poster.jpg" alt="Seeds.poster" />
           </div>
         </div>
       </div>
